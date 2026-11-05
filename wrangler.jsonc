@@ -1,0 +1,7 @@
+{
+  "name": "reprise-besle-org",
+  "account_id": "f59375cc9310b474ab19dd6a6a8870cd",
+  "compatibility_date": "2026-09-01",
+  "assets": { "directory": "./" },
+  "routes": [{ "pattern": "reprise.besle.org/*", "zone_name": "besle.org" }]
+}

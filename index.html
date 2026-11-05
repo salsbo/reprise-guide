@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reprise : Cmd+Tab revient là où on était</title>
+<meta name="description" content="Reprise remplace le sélecteur d'applications de macOS. Cmd+Tab revient à l'onglet ou à la fenêtre d'avant, pas à l'appli d'avant.">
+<link rel="icon" href="icon.png">
+<style>
+:root {
+  --lagon: #0E4A6E;
+  --eau: #2BA3C4;
+  --ecume: #EEF5F7;
+  --encre: #10242F;
+  --brume: #4F6776;
+  --filet: #C9DAE1;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--ecume);
+  color: var(--encre);
+  font: 400 1.0625rem/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+}
+.colonne { width: min(100% - 3rem, 46rem); margin-inline: auto; }
+header {
+  background: var(--lagon);
+  color: #fff;
+  padding: 4.5rem 0 9.5rem;
+}
+.marque { display: flex; align-items: center; gap: .6rem; margin: 0 0 3rem; font-weight: 600; }
+.marque img { width: 2rem; height: 2rem; }
+h1 {
+  margin: 0 0 1.25rem;
+  max-width: 15ch;
+  font-size: clamp(2.6rem, 7.5vw, 4.5rem);
+  line-height: 1.04;
+  letter-spacing: -.035em;
+  font-weight: 700;
+}
+.chapeau { margin: 0 0 2rem; max-width: 34rem; font-size: 1.2rem; line-height: 1.5; color: #DCEBF1; }
+.bouton {
+  display: inline-block;
+  padding: .8rem 1.4rem;
+  border-radius: .7rem;
+  background: #fff;
+  color: var(--lagon);
+  font-weight: 600;
+  text-decoration: none;
+}
+.bouton:hover { background: var(--ecume); }
+.bouton:focus-visible, a:focus-visible { outline: 3px solid var(--eau); outline-offset: 3px; }
+.version { margin: .9rem 0 0; font-size: .9rem; color: #BCD6E0; }
+.apercu { margin: -6.5rem auto 0; width: min(100% - 2rem, 44rem); }
+.apercu img { display: block; width: 100%; height: auto; filter: drop-shadow(0 18px 40px rgba(7, 34, 51, .45)); }
+main { padding: 1rem 0 4rem; }
+section { margin-top: 3.5rem; }
+h2 { margin: 0 0 1rem; font-size: 1.5rem; line-height: 1.25; letter-spacing: -.015em; }
+p { margin: 0 0 1rem; }
+.gestes { margin: 0; }
+.gestes > div {
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+  gap: 1.25rem;
+  padding: .9rem 0;
+  border-top: 1px solid var(--filet);
+}
+.gestes dt { font-size: .95rem; color: var(--brume); }
+.gestes dd { margin: 0; }
+kbd {
+  display: inline-block;
+  min-width: 1.9em;
+  padding: .1em .5em;
+  border: 1px solid var(--filet);
+  border-bottom-width: 3px;
+  border-radius: .4em;
+  background: #fff;
+  color: var(--encre);
+  font-family: inherit;
+  font-size: .85rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+ol, ul { margin: 0 0 1rem; padding-left: 1.3rem; }
+li { margin-bottom: .6rem; }
+strong { font-weight: 600; }
+a { color: var(--lagon); }
+footer { padding: 2rem 0 3rem; border-top: 1px solid var(--filet); font-size: .9rem; color: var(--brume); }
+@media (max-width: 40rem) {
+  header { padding: 3rem 0 5.5rem; }
+  .apercu { margin-top: -3rem; }
+  .gestes > div { grid-template-columns: 1fr; gap: .35rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="colonne">
+    <p class="marque"><img src="icon.png" alt="" width="32" height="32">Reprise</p>
+    <h1>Cmd+Tab revient là où on était.</h1>
+    <p class="chapeau">Sur Mac, Cmd+Tab passe d'appli en appli. Reprise le remplace : deux onglets Safari, puis Cmd+Tab, et c'est l'onglet d'avant qui revient, pas l'appli d'avant.</p>
+    <a class="bouton" href="https://github.com/salsbo/reprise-guide/releases/latest/download/Reprise.dmg">Télécharger pour Mac</a>
+    <p class="version">Version 1.0.0. Mac Apple Silicon. Essayé uniquement sur macOS 27.2.</p>
+  </div>
+</header>
+<div class="apercu">
+  <img src="apercu.png" alt="Le panneau de Reprise : une rangée d'icônes, une par onglet ou fenêtre ouverts, avec deux icônes Safari. L'une d'elles est surlignée et son titre s'affiche dessous.">
+</div>
+<main class="colonne">
+  <section>
+    <h2>Les touches</h2>
+    <dl class="gestes">
+      <div><dt><kbd>Cmd</kbd> <kbd>Tab</kbd>, appui bref</dt><dd>Retour à l'onglet ou à la fenêtre d'avant. Deux appuis font l'aller-retour.</dd></div>
+      <div><dt><kbd>Cmd</kbd> maintenu, <kbd>Tab</kbd> répété</dt><dd>Parcours de tout ce qui est ouvert, le plus récent d'abord. Relâcher Cmd pour y aller.</dd></div>
+      <div><dt><kbd>Maj</kbd> <kbd>Tab</kbd></dt><dd>Recule dans la liste.</dd></div>
+      <div><dt><kbd>Échap</kbd></dt><dd>Annule et reste où l'on est.</dd></div>
+    </dl>
+  </section>
+  <section>
+    <h2>Installation</h2>
+    <ol>
+      <li>Ouvrir le fichier téléchargé et glisser Reprise dans Applications.</li>
+      <li>Lancer Reprise et l'autoriser dans Réglages Système, Confidentialité et sécurité, Accessibilité. L'app se relance alors toute seule.</li>
+      <li>Accepter les demandes d'automatisation pour Safari, Chrome, Brave et Ghostty, si ces applis sont ouvertes. Elles servent à lire la liste des onglets et à choisir le bon. En cas de refus, l'appli reste au niveau de la fenêtre.</li>
+    </ol>
+    <p>Reprise s'ouvre ensuite à chaque démarrage du Mac et cherche une mise à jour une fois par jour. Son icône dans la barre de menus permet de la mettre en pause, de la quitter ou de désactiver l'ouverture au démarrage.</p>
+  </section>
+  <section>
+    <h2>Ce que Reprise lit</h2>
+    <ul>
+      <li><strong>Le clavier :</strong> de quoi reconnaître Cmd+Tab, rien de plus. Les autres frappes passent sans être notées.</li>
+      <li><strong>Les onglets et les fenêtres :</strong> leurs titres et leurs adresses, gardés en mémoire tant que l'app tourne et jamais écrits sur le disque. Le contenu des pages n'est pas lu.</li>
+      <li><strong>Le réseau :</strong> uniquement pour chercher une mise à jour, sur ce site, et la télécharger depuis GitHub. Rien d'autre n'est envoyé.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Les limites</h2>
+    <ul>
+      <li>Firefox et VS Code ne laissent pas choisir un onglet de l'extérieur : le retour s'arrête à la bonne fenêtre.</li>
+      <li>Une fenêtre sur un autre bureau n'apparaît pas dans la liste.</li>
+      <li>Passer entre deux onglets de même titre peut ne pas être repéré.</li>
+      <li>Le Cmd+Tab de macOS est coupé par une interface non documentée d'Apple. Une mise à jour de macOS pourrait l'empêcher.</li>
+      <li>Pendant la saisie d'un mot de passe, le raccourci peut ne pas répondre.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Pour l'enlever</h2>
+    <p>Quitter Reprise depuis la barre de menus : le Cmd+Tab de macOS revient tout de suite. Mettre ensuite l'app à la corbeille.</p>
+  </section>
+</main>
+<footer><div class="colonne">Reprise. <a href="https://github.com/salsbo/reprise-guide/releases">Toutes les versions</a>.</div></footer>
+</body>
+</html>
