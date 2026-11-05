@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Reprise</title>
+    <link>https://reprise.besle.org/appcast.xml</link>
+    <language>fr</language>
+    <item>
+      <title>Version 1.0.0</title>
+      <pubDate>Thu, 05 Nov 2026 19:39:36 +0100</pubDate>
+      <sparkle:version>4</sparkle:version>
+      <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Première version publique. Cmd+Tab revient à l'onglet ou à la fenêtre d'avant.</p>]]></description>
+      <enclosure url="https://github.com/salsbo/reprise-guide/releases/download/v1.0.0/Reprise-Update.zip" sparkle:edSignature="hHAzm3JdZWjEm03Y68eq4bvERJ7J6Mi1M9sN8MFTpaRG0LBAABhajHRnTOjdSKCxxCWrIKYLlwwRr0mpasRjBw==" length="1557778" type="application/octet-stream" />
+    </item>
+  </channel>
+</rss>
