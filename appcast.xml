@@ -5,13 +5,13 @@
     <link>https://reprise.besle.org/appcast.xml</link>
     <language>fr</language>
     <item>
-      <title>Version 1.1.0</title>
-      <pubDate>Fri, 06 Nov 2026 07:52:34 +0100</pubDate>
-      <sparkle:version>5</sparkle:version>
-      <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
+      <title>Version 1.2.0</title>
+      <pubDate>Thu, 12 Nov 2026 08:40:32 +0100</pubDate>
+      <sparkle:version>6</sparkle:version>
+      <sparkle:shortVersionString>1.2.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[<p>Un Cmd+Tab bref revient à l'onglet ou à la fenêtre d'avant, sans rien afficher. La liste des applis s'ouvre à 5 secondes ou au 2e Tab, avec une icône par appli qui ramène à son dernier endroit.</p>]]></description>
-      <enclosure url="https://github.com/salsbo/reprise-guide/releases/download/v1.1.0/Reprise-Update.zip" sparkle:edSignature="PbpJQoA9ZDPvswvemcFC+WVUPURJz8CzdxJygQe7g69TGD3zl0wvbEiWalaQKhwYj/nj/NPmEss1yy9Vk9aoAQ==" length="1560274" type="application/octet-stream" />
+      <description><![CDATA[<p>Le délai de la liste se règle dans le menu, de 0,5 à 10 secondes. Cmd+Option+Tab remonte l'historique d'un endroit à chaque appui. Dans la liste, l'appli en cours est la première icône, une lettre ou un clic choisit une appli, Q la quitte, H la masque. Les feuilles d'Excel comptent comme des onglets. Un tutoriel animé s'ouvre au premier lancement. Corrigé : un Cmd+Tab bref restait sans effet juste après le lancement d'une appli.</p>]]></description>
+      <enclosure url="https://github.com/salsbo/reprise-guide/releases/download/v1.2.0/Reprise-Update.zip" sparkle:edSignature="3nQyPjvKvJBlrD7G0VA79bIOkGH9K0mLYsnQiUcK09BVo9wVYaDQ3TvdbyfxN815c1BIa1QO/Cd8wFVOra9hAA==" length="1688774" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

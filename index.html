@@ -387,7 +387,7 @@
   <h1>Reprise : Cmd+Tab revient là où on était</h1>
   <p class="article-summary">Une application Mac qui remplace le Cmd+Tab de macOS : un appui bref ramène à l’onglet ou à la fenêtre d’avant, sans rien afficher.</p>
   <div class="article-meta">
-    <span>6 novembre 2026</span><span>·</span><span>Julien Robert</span><span>·</span><span>Version 1.1.0</span><span>·</span><span>Mac Apple Silicon</span><span>·</span><span>Essayé uniquement sur macOS 27.2</span>
+    <span>6 novembre 2026</span><span>·</span><span>Julien Robert</span><span>·</span><span>Version 1.2.0</span><span>·</span><span>Mac Apple Silicon</span><span>·</span><span>Essayé uniquement sur macOS 27.2</span>
   </div>
   <div class="article-demo">
     <a class="download-link" href="https://github.com/salsbo/reprise-guide/releases/latest/download/Reprise.dmg"><span aria-hidden="true">↓</span>Télécharger pour Mac</a>
@@ -416,10 +416,10 @@
   <section>
     <h2>Les touches</h2>
     <dl class="gestes">
-      <div><dt><kbd>Cmd</kbd> <kbd>Tab</kbd>, moins de 5 secondes</dt><dd>Retour à l’onglet ou à la fenêtre d’avant, sans rien afficher. Deux appuis font l’aller-retour.</dd></div>
-      <div><dt><kbd>Cmd</kbd> <kbd>Tab</kbd> maintenus 5 secondes, ou <kbd>Tab</kbd> une 2e fois</dt><dd>La liste des applis s’affiche, une icône par appli. Chacune ramène à sa dernière fenêtre ou à son dernier onglet. <kbd>Tab</kbd> pour avancer, relâcher Cmd pour y aller.</dd></div>
-      <div><dt><kbd>Maj</kbd> <kbd>Tab</kbd></dt><dd>Recule dans la liste.</dd></div>
-      <div><dt><kbd>Échap</kbd></dt><dd>Annule et reste où l’on est.</dd></div>
+      <div><dt><kbd>Cmd</kbd> <kbd>Tab</kbd>, relâchés avant le délai</dt><dd>Retour à l’onglet ou à la fenêtre d’avant, sans rien afficher. Deux appuis font l’aller-retour.</dd></div>
+      <div><dt><kbd>Cmd</kbd> <kbd>Tab</kbd> maintenus jusqu’au délai, ou <kbd>Tab</kbd> une 2e fois</dt><dd>La liste des applis s’affiche, une icône par appli. Chacune ramène à sa dernière fenêtre ou à son dernier onglet. <kbd>Tab</kbd> pour avancer, relâcher Cmd pour y aller. Le délai se règle dans le menu de Reprise, de 0,5 à 10 secondes. Il vaut 5 secondes au départ.</dd></div>
+      <div><dt>Dans la liste</dt><dd><kbd>Maj</kbd> <kbd>Tab</kbd> recule. Une lettre va à l’appli qui commence par elle, un clic choisit une icône. <kbd>Q</kbd> quitte l’appli choisie, <kbd>H</kbd> la masque. <kbd>Échap</kbd> annule et reste où l’on est.</dd></div>
+      <div><dt><kbd>Cmd</kbd> <kbd>Option</kbd> <kbd>Tab</kbd></dt><dd>Remonte l’historique d’un endroit à chaque appui, sans rien afficher, comme le bouton retour d’un navigateur. Avec <kbd>Maj</kbd>, repart dans l’autre sens.</dd></div>
     </dl>
   </section>
   <section>
@@ -427,15 +427,16 @@
     <ol>
       <li>Ouvrir le fichier téléchargé et glisser Reprise dans Applications.</li>
       <li>Lancer Reprise et l’autoriser dans Réglages Système, Confidentialité et sécurité, Accessibilité. L’app se relance alors toute seule.</li>
-      <li>Accepter les demandes d’automatisation pour Safari, Chrome, Brave et Ghostty, si ces applis sont ouvertes. Elles servent à lire la liste des onglets et à choisir le bon. En cas de refus, l’appli reste au niveau de la fenêtre.</li>
+      <li>Accepter les demandes d’automatisation pour Safari, Chrome, Brave, Ghostty et Excel, si ces applis sont ouvertes. Elles servent à choisir le bon onglet ou la bonne feuille. En cas de refus, l’appli reste au niveau de la fenêtre.</li>
+      <li>Un court tutoriel animé s’ouvre dès que Cmd+Tab fonctionne, avec les trois gestes à connaître.</li>
     </ol>
-    <p>Reprise s’ouvre ensuite à chaque démarrage du Mac et cherche une mise à jour une fois par jour. Son icône dans la barre de menus permet de la mettre en pause, de la quitter ou de désactiver l’ouverture au démarrage.</p>
+    <p>Reprise s’ouvre ensuite à chaque démarrage du Mac et cherche une mise à jour à chaque lancement, puis une fois par jour. Si elle en trouve une pendant la journée, son icône change et le menu propose de l’installer. Son icône dans la barre de menus permet de la mettre en pause, de la quitter, de régler le délai de la liste, de revoir le tutoriel ou de désactiver l’ouverture au démarrage.</p>
   </section>
   <section>
     <h2>Ce que Reprise lit</h2>
     <ul>
       <li><strong>Le clavier :</strong> de quoi reconnaître Cmd+Tab, rien de plus. Les autres frappes passent sans être notées.</li>
-      <li><strong>Les onglets et les fenêtres :</strong> leurs titres et leurs adresses, gardés en mémoire tant que l’app tourne et jamais écrits sur le disque. Le contenu des pages n’est pas lu.</li>
+      <li><strong>Les onglets, les feuilles Excel et les fenêtres :</strong> leurs titres et leurs adresses, gardés en mémoire tant que l’app tourne et jamais écrits sur le disque. Le contenu des pages et des cellules n’est pas lu.</li>
       <li><strong>Le réseau :</strong> uniquement pour chercher une mise à jour, sur ce site, et la télécharger depuis GitHub. Rien d’autre n’est envoyé.</li>
     </ul>
     <blockquote class="pullquote">Les autres frappes passent sans être notées.</blockquote>
@@ -444,11 +445,16 @@
     <h2>Les limites</h2>
     <ul>
       <li>Firefox et VS Code ne laissent pas choisir un onglet de l’extérieur : le retour s’arrête à la bonne fenêtre.</li>
+      <li>Dans Excel, seules les feuilles dont l’onglet est visible en bas de la fenêtre sont repérées. Numbers et LibreOffice restent au niveau de la fenêtre.</li>
       <li>Une fenêtre sur un autre bureau n’apparaît pas dans la liste.</li>
       <li>Passer entre deux onglets de même titre peut ne pas être repéré.</li>
       <li>Le Cmd+Tab de macOS est coupé par une interface non documentée d’Apple. Une mise à jour de macOS pourrait l’empêcher.</li>
       <li>Pendant la saisie d’un mot de passe, le raccourci peut ne pas répondre.</li>
     </ul>
+  </section>
+  <section>
+    <h2>Vos remarques ou signaler un bug</h2>
+    <p>Par mail, à <a href="mailto:jrobert@besle.org?subject=Reprise%20%3A%20remarque%20ou%20bug">jrobert@besle.org</a>, ou depuis l’icône de Reprise dans la barre de menus. Le message s’ouvre dans l’appli de mail, prêt à relire avant envoi, avec seulement les versions de Reprise et de macOS.</p>
   </section>
   <section>
     <h2>Pour l’enlever</h2>
