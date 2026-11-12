@@ -5,13 +5,13 @@
     <link>https://reprise.besle.org/appcast.xml</link>
     <language>fr</language>
     <item>
-      <title>Version 1.2.0</title>
-      <pubDate>Thu, 12 Nov 2026 08:40:32 +0100</pubDate>
-      <sparkle:version>6</sparkle:version>
-      <sparkle:shortVersionString>1.2.0</sparkle:shortVersionString>
+      <title>Version 1.2.1</title>
+      <pubDate>Thu, 12 Nov 2026 09:35:41 +0100</pubDate>
+      <sparkle:version>7</sparkle:version>
+      <sparkle:shortVersionString>1.2.1</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[<p>Le délai de la liste se règle dans le menu, de 0,5 à 10 secondes. Cmd+Option+Tab remonte l'historique d'un endroit à chaque appui. Dans la liste, l'appli en cours est la première icône, une lettre ou un clic choisit une appli, Q la quitte, H la masque. Les feuilles d'Excel comptent comme des onglets. Un tutoriel animé s'ouvre au premier lancement. Corrigé : un Cmd+Tab bref restait sans effet juste après le lancement d'une appli.</p>]]></description>
-      <enclosure url="https://github.com/salsbo/reprise-guide/releases/download/v1.2.0/Reprise-Update.zip" sparkle:edSignature="3nQyPjvKvJBlrD7G0VA79bIOkGH9K0mLYsnQiUcK09BVo9wVYaDQ3TvdbyfxN815c1BIa1QO/Cd8wFVOra9hAA==" length="1688774" type="application/octet-stream" />
+      <description><![CDATA[<p>Corrigé : dans Safari, un Cmd+Tab bref restait sans effet après un changement de page sans changement de titre, par exemple dans Outlook web.</p>]]></description>
+      <enclosure url="https://github.com/salsbo/reprise-guide/releases/download/v1.2.1/Reprise-Update.zip" sparkle:edSignature="muJTJ5bCHhhGjJbkJCcPu4H5w2qaSYB9gJmoiIEPi1cJ/uGeySd9C8MmldelfoXaf9Rsz4q9l9x69VgZqoLzAw==" length="1694510" type="application/octet-stream" />
     </item>
   </channel>
 </rss>
